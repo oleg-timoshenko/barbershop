@@ -1,0 +1,485 @@
+@wt: rgb(255, 255, 255);
+@cuprum: rgb(174, 137, 89);
+@btn-hov: rgba(152, 108, 52, 0.3);
+@infoline-bg: rgba(0, 0, 0, 0.702);
+
+.title-bg-text() {
+  font-size: 180px;
+  font-family: "Castellar", serif;
+  color: rgba(174, 137, 89, 0.051);
+  line-height: 1;
+}
+
+.btn-standard() {
+  height: 60px;
+  width: 232px;
+  background-color: @cuprum;
+  font-size: 18px;
+  font-family: "Muller Bold", sans-serif;
+  color: @wt;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+}
+
+.infoline-container() {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.infoline-text() {
+  max-width: 425px;
+  font-size: 28px;
+  font-family: "Lora Regular", serif;
+  color: @wt;
+  line-height: 1.2;
+}
+
+.service-title-standard() {
+  font-size: 25px;
+  font-family: "Lora Regular", serif;
+  color: @cuprum;
+  text-align: left;
+}
+
+.service-container-standard() {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.service-standard() {
+  width: 232px;
+  font-size: 18px;
+  font-family: "Muller Regular", sans-serif;
+  color: @wt;
+}
+
+.service-span-standard() {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "Muller Regular", sans-serif;
+  color: rgb(89, 85, 80);
+}
+
+.service-price-standard() {
+  font-size: 18px;
+  font-family: "Muller Regular", sans-serif;
+  color: @wt;
+}
+
+
+body {
+  background: url("../../dist/images/bg.png") top center;
+  background-size: cover;
+  margin: 0;
+}
+
+#header {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 59px 0 35px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+  #logo {
+    font-size: 25px;
+    font-family: "Lora Regular", serif;
+    color: @wt;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
+    width: 135px;
+  }
+
+  #menu {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 360px;
+
+      li {
+        list-style: none;
+        font-size: 16px;
+        font-family: "Muller Regular", sans-serif;
+        color: @wt;
+        line-height: 1.2;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: @wt;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 5px;
+        }
+
+        a:hover {
+          border-bottom: 1px solid @cuprum;
+        }
+      }
+    }
+  }
+
+  #phone {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 19px;
+      height: 19px;
+    }
+
+    span {
+      font-size: 15px;
+      font-family: "Muller Regular", sans-serif;
+      color: @wt;
+      margin-left: 15px;
+    }
+  }
+}
+
+#main {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+
+  #bg-text-strong {
+    .title-bg-text();
+    text-align: right;
+    max-width: 1170px;
+  }
+
+  #title {
+    display: inline-block;
+    max-width: 525px;
+
+    #title-barbershop {
+      font-size: 40px;
+      font-family: "Lora Regular", serif;
+      color: @wt;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    #title-text {
+      font-size: 22px;
+      font-family: "Lora Regular", serif;
+      color: @wt;
+      line-height: 1.2;
+      margin-top: 40px;
+    }
+
+    #title-action {
+      display: inline-block;
+      text-align: center;
+      margin: 50px 0;
+
+      button {
+        .btn-standard();
+      }
+
+      button:hover {
+        box-shadow: 0 0 18.75px 6.25px @btn-hov;
+      }
+    }
+  }
+
+  #bg-text-club {
+    .title-bg-text();
+    text-align: left;
+  }
+
+  #title-image {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    height: 674px;
+  }
+}
+
+#advantages {
+  background: rgb(19, 19, 24);
+
+  #advantages-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0;
+
+    .advantage {
+      display: flex;
+      align-items: center;
+
+      .advantage-image {
+        margin-right: 30px;
+        height: 60px;
+      }
+
+      .advantage-text {
+        font-size: 18px;
+        font-family: "Muller Regular", sans-serif;
+        color: @wt;
+        line-height: 1.111;
+      }
+    }
+  }
+}
+
+#service {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 100px;
+
+  #service-line {
+    border-right: 1px solid @cuprum;
+
+    #service-title {
+      font-size: 32px;
+      font-family: "Lora Regular", serif;
+      color: @wt;
+      line-height: 1.156;
+      text-align: center;
+      margin-left: -90px; // Ошибка дизайнера или так и должно быть?
+      padding-bottom: 60px;
+    }
+
+    #service-content {
+      display: flex;
+      align-items: flex-start;
+
+      #service-features {
+        max-width: 600px;
+
+        #service-features-image {
+          max-width: 600px;
+          height: 420px;
+        }
+
+        #features-text {
+          margin-top: 60px;
+
+          .feature {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+
+            .feature-image {
+              width: 32px;
+              height: 32px;
+              text-align: center;
+
+              img {
+                height: 100%;
+              }
+            }
+
+            .feature-phrase {
+              font-size: 18px;
+              font-family: "Muller Regular", sans-serif;
+              color: @wt;
+              line-height: 1.111;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+
+      #service-stories {
+        margin-left: 70px;
+
+        #stories-text {
+          .story {
+            margin-bottom: 35px;
+            font-size: 16px;
+            font-family: "Muller Regular", sans-serif;
+            color: @wt;
+            line-height: 1.313;
+            width: 455px;
+          }
+        }
+
+        #story-image {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#instagram {
+  background: url("../../dist/images/bg-insta.png") center center;
+  margin-top: 100px;
+  background-size: 1920px;
+
+  #insta-bg {
+    background: @infoline-bg;
+
+
+    #instagram-container {
+      .infoline-container();
+
+      #instagram-text {
+        .infoline-text();
+
+        span {
+          font-family: "Lora Bold", serif;
+        }
+      }
+
+      #instagram-button {
+        text-align: center;
+        display: inline-block;
+
+        button {
+          .btn-standard();
+        }
+
+        button:hover {
+          box-shadow: 0 0 18.75px 6.25px @btn-hov;
+        }
+      }
+    }
+  }
+}
+
+#price {
+  max-width: 1170px;
+  margin: 100px auto;
+  border-left: 1px solid @cuprum;
+
+  #price-title {
+    font-size: 32px;
+    font-family: "Lora Regular", serif;
+    color: @wt;
+    text-align: center;
+  }
+
+  #price-service {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    background-image: url("../../dist/images/shears.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    #basic-service {
+      margin-left: 84px;
+      width: 370px;
+
+      .service-title {
+        .service-title-standard();
+      }
+
+      .service-container {
+        .service-container-standard();
+
+        .service {
+          .service-standard();
+
+          span {
+            .service-span-standard();
+          }
+        }
+
+        .price {
+          .service-price-standard();
+        }
+      }
+    }
+
+    #additional-service {
+      width: 370px;
+      margin-right: 35px;
+
+      #complex-services {
+        .service-title {
+          .service-title-standard();
+        }
+
+        .service-container {
+          .service-container-standard();
+
+          .service {
+            .service-standard();
+          }
+
+          .price {
+            .service-price-standard();
+          }
+        }
+      }
+
+      #add-service {
+        margin-top: 50px;
+
+        .service-title {
+          .service-title-standard();
+        }
+
+        .service-container {
+          .service-container-standard();
+
+          .service {
+            .service-standard();
+
+            span {
+              .service-span-standard();
+            }
+          }
+
+          .price {
+            .service-price-standard();
+          }
+        }
+      }
+    }
+  }
+}
+
+#discount {
+  background: url("../../dist/images/bg-insta.png") center center;
+  margin-top: 100px;
+  background-size: 1920px;
+
+  #discount-bg {
+    background: @infoline-bg;
+
+    #discount-container {
+      .infoline-container();
+
+      #discount-text {
+        .infoline-text();
+
+        span {
+          font-family: "Lora Bold", serif;
+          color: @cuprum;
+        }
+      }
+
+      #discount-button {
+        text-align: center;
+        display: inline-block;
+
+        button {
+          .btn-standard();
+        }
+
+        button:hover {
+          box-shadow: 0 0 18.75px 6.25px @btn-hov;
+        }
+      }
+    }
+  }
+}
