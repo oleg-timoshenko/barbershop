@@ -3,6 +3,16 @@
 @btn-hov: rgba(152, 108, 52, 0.3);
 @infoline-bg: rgba(0, 0, 0, 0.702);
 
+.logo-std() {
+  font-size: 25px;
+  font-family: "Lora Regular", serif;
+  color: @wt;
+  line-height: 1.2;
+  text-align: center;
+  display: inline-block;
+  width: 135px;
+}
+
 .title-bg-text() {
   font-size: 180px;
   font-family: "Castellar", serif;
@@ -92,14 +102,8 @@ body {
   align-items: center;
 
 
-  #logo {
-    font-size: 25px;
-    font-family: "Lora Regular", serif;
-    color: @wt;
-    line-height: 1.2;
-    text-align: center;
-    display: inline-block;
-    width: 135px;
+  .logo {
+    .logo-std()
   }
 
   #menu {
@@ -121,10 +125,10 @@ body {
           color: @wt;
           border-bottom: 1px solid transparent;
           padding-bottom: 5px;
-        }
 
-        a:hover {
-          border-bottom: 1px solid @cuprum;
+          &:hover {
+            border-bottom: 1px solid @cuprum;
+          }
         }
       }
     }
@@ -186,10 +190,10 @@ body {
 
       button {
         .btn-standard();
-      }
 
-      button:hover {
-        box-shadow: 0 0 18.75px 6.25px @btn-hov;
+        &:hover {
+          box-shadow: 0 0 18.75px 6.25px @btn-hov;
+        }
       }
     }
   }
@@ -250,8 +254,8 @@ body {
       color: @wt;
       line-height: 1.156;
       text-align: center;
-      margin-left: -90px; // Ошибка дизайнера или так и должно быть?
       padding-bottom: 60px;
+      padding-right: 90px;
     }
 
     #service-content {
@@ -343,10 +347,10 @@ body {
 
         button {
           .btn-standard();
-        }
 
-        button:hover {
-          box-shadow: 0 0 18.75px 6.25px @btn-hov;
+          &:hover {
+            box-shadow: 0 0 18.75px 6.25px @btn-hov;
+          }
         }
       }
     }
@@ -357,6 +361,7 @@ body {
   max-width: 1170px;
   margin: 100px auto;
   border-left: 1px solid @cuprum;
+  box-sizing: border-box;
 
   #price-title {
     font-size: 32px;
@@ -474,11 +479,186 @@ body {
 
         button {
           .btn-standard();
+
+          &:hover {
+            box-shadow: 0 0 18.75px 6.25px @btn-hov;
+          }
+        }
+      }
+    }
+  }
+}
+
+#masters {
+  max-width: 1170px;
+  margin: 100px auto;
+  border-right: 1px solid @cuprum;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+
+  #masters-title {
+    font-size: 32px;
+    font-family: "Lora Regular", serif;
+    color: @wt;
+    text-align: center;
+    margin-bottom: 59px;
+  }
+
+  #masters-description {
+
+    text-align: center;
+    padding-bottom: 45px;
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      font-family: "Muller Regular", sans-serif;
+      color: @wt;
+      line-height: 1.389;
+      width: 796px;
+    }
+  }
+
+  #masters-slider.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1004px;
+
+
+    .master {
+      height: 405px;
+      width: 392px;
+      position: relative;
+
+      img {
+        display: inline-block;
+        width: 100%;
+      }
+
+      .master-bg-text {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 58px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.651);
+
+        .master-name {
+          font-size: 20px;
+          font-family: "Lora Regular", serif;
+          color: @wt;
+          margin: 30px 0;
         }
 
-        button:hover {
-          box-shadow: 0 0 18.75px 6.25px @btn-hov;
+        .master-button {
+          button {
+            .btn-standard();
+            height: 40px;
+            width: 165px;
+          }
         }
+      }
+    }
+  }
+}
+
+#footer {
+  padding-top: 60px;
+  background: rgb(19, 19, 24);
+
+  #footer-container {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    #map-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 60px;
+
+      #contacts {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .logo {
+          .logo-std;
+          margin-bottom: 70px;
+        }
+
+        #working-hours {
+          font-size: 16px;
+          font-family: "Muller Regular", sans-serif;
+          color: @wt;
+          line-height: 1.2;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        #address {
+          font-size: 16px;
+          font-family: "Muller Regular", sans-serif;
+          color: @wt;
+          line-height: 1.2;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        #social-container {
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            font-size: 16px;
+            font-family: "Muller Regular", sans-serif;
+            color: @wt;
+          }
+
+          #networks {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 125px;
+            a {
+              display: inline-block;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+        }
+
+        #mail {
+          span {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            font-family: "Muller Regular", sans-serif;
+            color: @wt;
+            line-height: 1.2;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    #legal {
+      padding: 100px 0 60px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        font-size: 14px;
+        font-family: "Muller Regular", sans-serif;
+        color: rgb(80, 79, 79);
+        line-height: 1.2;
       }
     }
   }
